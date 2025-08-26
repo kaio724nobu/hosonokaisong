@@ -12,6 +12,8 @@
   /* accent pair for sections (overridable per theme-*) */
   --accent-a: rgba(14,165,233,.20);
   --accent-b: rgba(124,212,193,.18);
+  /* fixed nav height for offsetting content */
+  --nav-height: 56px;
 }
 
 * { box-sizing: border-box; }
@@ -39,7 +41,7 @@ html { scroll-behavior: smooth; }
   padding: 0 20px;
 }
 
-.hero { position: relative; background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%); border-bottom: 1px solid #e6eff7; overflow: hidden; min-height: 100vh; }
+.hero { position: relative; background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%); border-bottom: 1px solid #e6eff7; overflow: hidden; min-height: 100vh; padding-top: calc(var(--nav-height) + env(safe-area-inset-top, 0)); }
 .hero-centered .hero-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 18px; padding: 36px 20px; }
 .hero-centered .avatar { order: -1; }
 .hero-centered .socials { justify-content: center; }
@@ -192,10 +194,10 @@ html { scroll-behavior: smooth; }
 .marquee-track span { color: #0b5d74; background: rgba(219,244,255,.9); border: 1px solid rgba(14,165,233,.25); border-radius: 999px; padding: 6px 12px; box-shadow: 0 2px 8px rgba(14,165,233,.12); }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-.wave { display: block; width: 100%; height: 60px; margin-top: 44px; }
+.wave { display: block; width: 100%; height: 60px; margin-top: 0; }
 
 .section { padding: 44px 0; animation: fadeIn .6s ease both; }
-.section { scroll-margin-top: 80px; }
+.section { scroll-margin-top: calc(var(--nav-height) + 16px); }
 .section h2 { margin: 0 16px 18px 0; font-size: 24px; font-weight: 800; letter-spacing: .02em; display: inline-block; position: relative; }
 .section h2::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 10px; background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); border-radius: 6px; }
 
@@ -284,9 +286,13 @@ html { scroll-behavior: smooth; }
   .nav { gap: 10px; }
   .nav-left { justify-content: center; flex: 1 1 100%; }
   .nav-right { justify-content: center; width: 100%; }
-  .section { padding: 28px 0; scroll-margin-top: 96px; }
+  .section { padding: 28px 0; scroll-margin-top: calc(var(--nav-height) + 24px); }
   .section h2 { font-size: 20px; margin-bottom: 14px; }
   .video-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
   .gallery-item img { height: 120px; }
+}
+
+@media (min-width: 641px) {
+  :root { --nav-height: 64px; }
 }
