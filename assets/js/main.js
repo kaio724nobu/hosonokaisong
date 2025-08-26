@@ -61,6 +61,7 @@
   const btn = document.querySelector('.menu-toggle');
   const menu = document.getElementById('nav-menu');
   const backdrop = document.getElementById('nav-backdrop');
+  const closeBtn = document.querySelector('.menu-close');
   if (!btn || !menu) return;
   const root = document.documentElement;
   const setOpen = (open) => {
@@ -68,6 +69,7 @@
     btn.setAttribute('aria-expanded', String(open));
   };
   btn.addEventListener('click', () => setOpen(!root.classList.contains('menu-open')));
+  if (closeBtn) closeBtn.addEventListener('click', () => setOpen(false));
   if (backdrop) backdrop.addEventListener('click', () => setOpen(false));
   menu.addEventListener('click', (e) => {
     const a = e.target.closest('a');
