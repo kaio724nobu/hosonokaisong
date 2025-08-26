@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ほそのかい | Official</title>
+  <meta name="description" content="ほそのかいのアーティストページ。最新情報、プロフィール、SNS。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="hero hero-centered">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-slider" aria-hidden="true">
+      <div class="hero-slider-viewport">
+        <div class="hero-slider-track" id="hero-slider-track"></div>
+      </div>
+    </div>
+    <div class="hero-decor" aria-hidden="true"></div>
+    <div class="hero-reveal" aria-hidden="true">
+      <h1 class="reveal-title"><span class="brand">ほそのかい</span></h1>
+    </div>
+    <nav class="nav container nav-bar">
+      <div class="nav-left">
+        <a href="#next-live">NEXT LIVE</a>
+        <a href="#profile">About</a>
+        <a href="#music">Music</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a class="icon-btn" href="https://x.com/dummyskai" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="currentColor" d="M2 2h4l6 7 6-7h4l-8 9 8 11h-4l-6-8-6 8H2l8-11L2 2z"/>
+          </svg>
+        </a>
+        <a class="icon-btn" href="https://www.youtube.com/@%E3%81%BB%E3%81%9D%E3%81%AE%E3%81%8B%E3%81%84/featured" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="6.5" width="18" height="11" rx="3" fill="#FF0000"/>
+            <path d="M11 10l5 2-5 2v-4z" fill="#ffffff"/>
+          </svg>
+        </a>
+        <a class="icon-btn" href="https://www.instagram.com/kai742401/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32L60,58.7C120,85,240,139,360,154.7C480,171,600,149,720,133.3C840,117,960,107,1080,112C1200,117,1320,139,1380,149.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" fill="var(--surface-strong)"></path>
+    </svg>
+  </header>
+
+  <main class="container">
+    <section id="next-live" class="section theme-blue">
+      <h2>NEXT LIVE</h2>
+      <div class="panel">
+        <!-- 固定ツイートのURLはここだけ変更すればOK -->
+        <div id="tweet-embed" data-tweet-url="https://twitter.com/DummysKai/status/1948041609888899323"></div>
+      </div>
+    </section>
+
+    <section id="profile" class="section theme-teal">
+      <h2>About</h2>
+      <div class="panel">
+        <p>どうも！ほそのかいです！</p>
+        <p>普段は都内を中心に弾き語りをしています。</p>
+        <p>高校３年（2022年）から弾き語り活動を始め、現在３年目。</p>
+        <p>先日約１年の活動休止期間を経て2025年7月に活動再開しました！！</p>
+        <p>今後ともほそのかいをよろしくお願いします！！</p>
+      </div>
+    </section>
+
+    <section id="music" class="section theme-lavender">
+      <h2>Music</h2>
+      <div class="panel with-fab">
+        <div class="actions actions-br">
+          <a class="btn btn-yt btn-sm" href="https://www.youtube.com/@%E3%81%BB%E3%81%9D%E3%81%AE%E3%81%8B%E3%81%84/featured" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <div class="video-grid">
+          <div class="video">
+            <div class="player">
+              <iframe src="https://www.youtube.com/embed/bCmF2R-19KE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="video">
+            <div class="player">
+              <iframe src="https://www.youtube.com/embed/zxDc6GP7J3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section theme-blue">
+      <h2>Gallery</h2>
+      <div class="panel">
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <section id="calendar" class="section theme-blue">
+      <h2>Calendar</h2>
+      <div class="panel">
+        <iframe title="Calendar" src="https://timetreeapp.com/public_calendars/kaiartist/embed/monthly?calendar_name=true&frame_color=%2347b2f7" style="width:100%;min-height:700px;aspect-ratio:680/720;border:none"></iframe>
+      </div>
+    </section>
+
+    
+
+    <section id="contact" class="section theme-teal">
+      <h2>Contact</h2>
+      <div class="panel">
+        <p>お仕事のご依頼・お問い合わせは、以下にご連絡ください。</p>
+        <ul class="links">
+          <li>メール: <a href="mailto:kaio724business@gmail.com">kaio724business@gmail.com</a></li>
+          <li>XのDM: <a href="https://x.com/DummysKai" target="_blank" rel="noopener">@DummysKai</a> へDM</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© ほそのかい</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/tweets.js"></script>
+  <script src="assets/js/photos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+<script>
+</script>
+</html>
